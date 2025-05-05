@@ -6,3 +6,9 @@ def rolar_dados(n):
     for i in range(n):
         rolagem.append(randint(1,6))
     return rolagem
+
+#exercicio 2
+def guardar_dado(rolados, guardados, indice):
+    guardados.append(rolados[indice])
+    rolados.pop(indice)
+    return [rolados, guardados]
