@@ -86,3 +86,20 @@ def calcula_pontos_full_house(rolados):
         return pontuacao3+pontuacao2
     else:
         return 0
+    
+#exercicio 9
+def calcula_pontos_quadra(rolados):
+    dic = {}
+    for num in rolados:
+        if num not in dic:
+            dic[num]=1
+        else:
+            dic[num]+=1
+        
+    resultado = 0
+    for dado in dic:
+        if dic[dado]>=4:
+            for dice, qnt in dic.items():
+                resultado += dice*qnt
+            return resultado
+    return 0
