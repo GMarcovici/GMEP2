@@ -31,3 +31,10 @@ def calcula_pontos_regra_simples(rolados):
     for num in rolados:
         pontos[num]+=num
     return pontos
+
+#exercicio 5
+def calcula_pontos_soma(rolados):
+    soma = 0
+    for num in rolados:
+        soma += num
+    return soma
