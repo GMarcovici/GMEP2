@@ -103,3 +103,18 @@ def calcula_pontos_quadra(rolados):
                 resultado += dice*qnt
             return resultado
     return 0
+
+#exercicio 10
+def calcula_pontos_quina(rolados):
+    dic = {}
+    for num in rolados:
+        if num not in dic:
+            dic[num]=1
+        else:
+            dic[num]+=1
+        
+    resultado = 0
+    for dado in dic:
+        if dic[dado]>=5:
+            return 50
+    return 0
