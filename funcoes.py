@@ -12,3 +12,9 @@ def guardar_dado(rolados, guardados, indice):
     guardados.append(rolados[indice])
     rolados.pop(indice)
     return [rolados, guardados]
+
+#exercicio 3
+def remover_dado(rolados, guardados, indice_remover):
+    rolados.append(guardados[indice_remover])
+    guardados.pop(indice_remover)
+    return [rolados, guardados]
