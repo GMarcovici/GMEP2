@@ -118,3 +118,14 @@ def calcula_pontos_quina(rolados):
         if dic[dado]>=5:
             return 50
     return 0
+
+#exercicio 11
+def calcula_pontos_regra_avancada(rolados):
+    dic = {}
+    dic['cinco_iguais'] = calcula_pontos_quina(rolados)
+    dic['full_house']= calcula_pontos_full_house(rolados)
+    dic['quadra']= calcula_pontos_quadra(rolados)
+    dic['sem_combinacao']=calcula_pontos_soma(rolados)
+    dic['sequencia_alta']= calcula_pontos_sequencia_alta(rolados)
+    dic['sequencia_baixa']= calcula_pontos_sequencia_baixa(rolados)
+    return dic
