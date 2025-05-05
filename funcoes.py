@@ -53,3 +53,14 @@ def calcula_pontos_sequencia_baixa(dados):
                     if num - 3 in dados:
                         return 15
     return 0
+
+#exercicio 7
+def calcula_pontos_sequencia_alta(dados):
+    for num in dados:
+        if num == 1 or num ==2:
+            if num+1 in dados:
+                if num + 2 in dados:
+                    if num + 3 in dados:
+                        if num+4 in dados:
+                            return 30
+    return 0
