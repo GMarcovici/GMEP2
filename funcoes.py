@@ -64,3 +64,25 @@ def calcula_pontos_sequencia_alta(dados):
                         if num+4 in dados:
                             return 30
     return 0
+
+#exercicio 8
+def calcula_pontos_full_house(rolados):
+    dic = {}
+    for num in rolados:
+        if num not in dic:
+            dic[num]=1
+        else:
+            dic[num]+=1
+    
+    pontuacao3 = 0
+    pontuacao2 = 0
+    for dado, qnt in dic.items():
+        if qnt==3:
+            pontuacao3 = int(dado)*3
+        if qnt==2:
+            pontuacao2 = int(dado)*2
+    
+    if pontuacao3 != 0 and pontuacao2!=0:
+        return pontuacao3+pontuacao2
+    else:
+        return 0
