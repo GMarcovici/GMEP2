@@ -38,3 +38,18 @@ def calcula_pontos_soma(rolados):
     for num in rolados:
         soma += num
     return soma
+
+#exercicio 6
+def calcula_pontos_sequencia_baixa(dados):
+    for num in dados:
+        if num == 1 or num ==2:
+            if num+1 in dados:
+                if num + 2 in dados:
+                    if num + 3 in dados:
+                        return 15
+        if num == 5 or num==6:
+            if num-1 in dados:
+                if num - 2 in dados:
+                    if num - 3 in dados:
+                        return 15
+    return 0
