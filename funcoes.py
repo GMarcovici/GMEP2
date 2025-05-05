@@ -18,3 +18,16 @@ def remover_dado(rolados, guardados, indice_remover):
     rolados.append(guardados[indice_remover])
     guardados.pop(indice_remover)
     return [rolados, guardados]
+
+#exercicio 4
+def calcula_pontos_regra_simples(rolados):
+    pontos = {}
+    pontos[1]= 0
+    pontos[2]= 0
+    pontos[3]= 0
+    pontos[4]= 0
+    pontos[5]= 0
+    pontos[6]= 0
+    for num in rolados:
+        pontos[num]+=num
+    return pontos
